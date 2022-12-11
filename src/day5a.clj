@@ -19,6 +19,11 @@
 ;; instructions data structure is a 2-dimensional list, for example:
 ;; ((" 2 " " 3 " " 1 ") (" 6 " " 1 " " 5 ") ...)
 
+;; Originally there is only one input data,
+;; but I split the input data into 2 seperated txt file in advance,
+;; One is the initial positions of all crates in different stacks, i.e: day5-stacks.txt
+;; One is the moving instructions, i.e: day5-move-instructions.txt
+
 (let [init-stacks (->> (slurp "../input/day5-stacks.txt")
                        (str/split-lines)
                        (map #(str/split % #"    | "))
