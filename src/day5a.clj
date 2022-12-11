@@ -13,10 +13,10 @@
                    (merge-with into all-stacks stack)))
                {})))
 
-;; init-stacks data structure is a map:
+;; init-stacks data structure is a map, for example:
 ;; {1 ["A" "B" "C"], 2 ["S" "X" "T"], 3 ["E" "Z"]...}
 
-;; instructions data structure is a 2-dimensional list:
+;; instructions data structure is a 2-dimensional list, for example:
 ;; ((" 2 " " 3 " " 1 ") (" 6 " " 1 " " 5 ") ...)
 
 (let [init-stacks (->> (slurp "../input/day5-stacks.txt")
